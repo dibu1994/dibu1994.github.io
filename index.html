@@ -58,10 +58,28 @@
       </footer>
 
          <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/print.css" rel="stylesheet">
+    <link href="css/print.css" rel="stylesheet">-->
+    <script>
+      function loadStyleSheet(src){
+            if (document.createStyleSheet) document.createStyleSheet(src);
+            else {
+                var stylesheet = document.createElement('link');
+                stylesheet.href = src;
+                stylesheet.rel = 'stylesheet';
+                stylesheet.type = 'text/css';
+                document.getElementsByTagName('head')[0].appendChild(stylesheet);
+            }
+        }
+        window.onload=function(){
+loadStyleSheet("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+        loadStyleSheet("css/style.css");
+        loadStyleSheet("css/print.css");
+        }
+        
+      </script>
     
     </div>
   </body>
