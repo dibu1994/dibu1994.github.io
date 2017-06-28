@@ -181,9 +181,6 @@ footer span {
     
     </div>
 <noscript id="deferred-styles">
-
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
     <link href="css/style.css" rel="stylesheet">
     </noscript>
     <script defer async>
@@ -198,6 +195,14 @@ footer span {
           webkitRequestAnimationFrame || msRequestAnimationFrame;
       if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
       else window.addEventListener('load', loadDeferredStyles);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+          families: ['Open+Sans:400,700']
+        }
+      });
     </script>
   </body>
 </html>
